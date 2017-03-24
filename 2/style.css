@@ -41,8 +41,10 @@
 		width: 100%;
 	}
 }
-header{
+.main-elements{
 	height:80px;
+}
+header.main-elements{
 	border:3px solid #F58110;
 	margin-bottom: 30px;
 }
@@ -52,8 +54,7 @@ aside{
 	border:3px solid #6A95AE;
 	float: left;	
 }
-footer{
-	height:80px;
+footer.main-elements{
 	border:3px solid #BC70E3;
 	margin-top: 30px;
 }
@@ -73,56 +74,49 @@ footer{
 	margin-right:-20px;
 	overflow: hidden;
 }
-.hrz{
+.horizontal{
 	position:absolute;
 }
-.hrz.horizontal-one{
+.horizontal.top{
 	top:107px;
+}
+.horizontal.left{
 	left:438px;
 }
-.hrz.horizontal-two{
-	top:107px;
+.horizontal.center{
 	left:565px;
 }
-.hrz.horizontal-three{
-	top:107px;
+.horizontal.right{
 	left:692px;
+}
+.horizontal.top.top-right{
 	padding-right: -20px;
 	clip:rect(auto, auto, 13px, auto);
 }
-.hrz.horizontal-four{
+.horizontal.bottom{
 	top:375px;
-	left:438px;
 }
-.hrz.horizontal-five{
-	top:375px;
-	left:565px;
-}
-.hrz.horizontal-six{
-	top:375px;
-	left:692px;
+.horizontal.bottom.bottom-right{
 	clip:rect(auto, auto, 13px, auto);
 }
-.sqr{
+.square{
 	position:absolute;
+	right:-5px;
 }
-.sqr.sqr-one{
+.square.top{
 	top:107px;
-	right:-5px;
 }
-.sqr.sqr-two{
+.square.bottom{
 	top:350px;
-	right:-5px;
 }
-.vert{
+.vertical{
 	position:absolute;
+	right:-26px;
 }
-.vert.vertical-one{
+.vertical.top{
 	top:157px;
-	right:-26px;
 }
-.vert.vertical-two{
+.vertical.bottom{
 	top:284px;
-	right:-26px;
 	clip:rect(auto, auto, auto, 10px);
 }
