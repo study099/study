@@ -2,13 +2,6 @@
 	padding: 0px;
 	margin: 0px;
 }
-#wrapper{
-	margin: 0px auto;
-	width: 800px;
-	min-width: 600px;
-	position: relative;
-	margin-top: 40px;
-}
 @media(max-width: 320px){
 	header{
 		width: 310px;
@@ -49,7 +42,6 @@
 	}
 }
 header{
-	/*width: 100%;*/
 	height:80px;
 	border:3px solid #F58110;
 	margin-bottom: 30px;
@@ -60,79 +52,77 @@ aside{
 	border:3px solid #6A95AE;
 	float: left;	
 }
-#content{
-	/*width: 71%;*/
+footer{
+	height:80px;
+	border:3px solid #BC70E3;
+	margin-top: 30px;
+}
+.wrapper{
+	margin: 0px auto;
+	width: 800px;
+	min-width: 600px;
+	position: relative;
+	margin-top: 40px;
+}
+.content{
 	width: 57%;
 	height: 266px;
 	border:3px solid #6A95AE;
 	border-right: none;
-	/*border-style:solid;*/
-	/*border-image: url(img/bg_line2.gif) 0 0 30 30 round repeat;*/
-	/*border-width: 0 0 20px 20px;*/
-	/*border-image: url(img/bg_line2ie.gif) 30 round round;*/
 	margin-left: 330px;
 	margin-right:-20px;
 	overflow: hidden;
 }
-#hor0{
+.hrz{
 	position:absolute;
+}
+.hrz.horizontal-one{
 	top:107px;
 	left:438px;
 }
-#hor1{
-	position:absolute;
+.hrz.horizontal-two{
 	top:107px;
 	left:565px;
 }
-#hor2{
-	/*width:150px;*/
-	position:absolute;
+.hrz.horizontal-three{
 	top:107px;
 	left:692px;
 	padding-right: -20px;
 	clip:rect(auto, auto, 13px, auto);
 }
-#hor3{
-	position:absolute;
+.hrz.horizontal-four{
 	top:375px;
 	left:438px;
 }
-#hor4{
-	position:absolute;
+.hrz.horizontal-five{
 	top:375px;
 	left:565px;
 }
-#hor5{
-	/*width:150px;*/
-	position:absolute;
+.hrz.horizontal-six{
 	top:375px;
 	left:692px;
 	clip:rect(auto, auto, 13px, auto);
 }
-#sqr1{
+.sqr{
 	position:absolute;
+}
+.sqr.sqr-one{
 	top:107px;
 	right:-5px;
 }
-#sqr2{
-	position:absolute;
+.sqr.sqr-two{
 	top:350px;
 	right:-5px;
 }
-#vert1{
+.vert{
 	position:absolute;
+}
+.vert.vertical-one{
 	top:157px;
 	right:-26px;
 }
-#vert2{
-	position:absolute;
+.vert.vertical-two{
 	top:284px;
 	right:-26px;
 	clip:rect(auto, auto, auto, 10px);
-}
-footer{
-	/*width: 100%;*/
-	height:80px;
-	border:3px solid #BC70E3;
-	margin-top: 30px;
 }
