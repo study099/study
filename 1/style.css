@@ -1,0 +1,133 @@
+/*SASS for compatibility*/
+@mixin display-flex() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
+@mixin flex-wrap($values) {
+  -webkit-flex-wrap: $values;
+  -moz-flex-wrap:  $values;
+  -webkit-flex-wrap:  $values;
+  -ms-flex-wrap:  $values;
+  flex-wrap:  $values;
+}
+
+@mixin justify-content($values) {
+  -moz-justify-content:  $values;
+  -webkit-justify-content:  $values;
+  -ms-justify-content:  $values;
+  justify-content:  $values;
+}
+
+*{
+	font-size: 0.978em;
+	margin: 0px;
+	padding: 0px;
+}
+a{
+	text-decoration: none;
+}
+a:link, a:visited, a:active{
+	color: black;
+}
+.container{
+	margin:0px auto;
+	width: 800px;
+	position: relative;
+	display:flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	background: #F9DFDF;
+}
+.container.container-first{
+	border-bottom: 1px solid gray;
+}
+.container.container-second{
+	height: 200px;
+	padding-top: 40px;
+}
+.outer-first{
+	width: 200px;
+	height: 200px;
+	background: #E7CFAC;
+	margin-bottom: 50px;
+	border:1px solid #C7BCBC;
+}
+.inner-first{
+	width: 170px;
+	height: 170px;
+	background: black;
+	margin:15px auto;
+}
+.inscript{
+	height: 30px;
+	width: 200px;
+	background: #FFF2F2;
+	border:1px solid #C7BCBC;
+	position: absolute;
+	line-height: 28px;
+	text-indent: 18px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.inscript.inscript-one{
+	top: 200px;
+	left: 0px;
+}
+.inscript.inscript-two{
+	top: 200px;
+	left:299px;
+	
+}
+.inscript.inscript-three{
+	top: 200px;
+	right: 0px;
+}
+.hiddentext:hover, .inner-first:hover .hiddentext{
+	height: 100px;
+	line-height: 20px;
+	white-space: normal;
+	z-index: 5;
+}
+
+.outer-second{
+	width: 200px;
+	height: 200px;
+	background: #E7CFAC;
+	margin-bottom: 50px;
+	border:1px solid #C7BCBC;
+}
+.inner-first{
+	width: 170px;
+	height: 170px;
+	background: black;
+	margin:15px auto;
+}
+.inscript.inscript-four{
+	top: 240px;
+	left: 0px;
+}
+.inscript.inscript-five{
+	top: 240px;
+	left:299px;
+}
+.inscript.inscript-six{
+	top: 240px;
+	right: 0px;
+}
+.hiddentext-one:hover, .inner-first:hover .hiddentext{
+	height: 50px;
+	line-height: 20px;
+	white-space: normal;
+}
