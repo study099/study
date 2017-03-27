@@ -1,0 +1,146 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+.video{
+	width: 400px;
+	height: 330px;
+}
+.vid{
+	position: relative;
+	margin:0px auto;
+	margin-top:100px;
+	width: 400px;
+	height: 280px;
+	/*background: red;*/
+}
+.tray{
+	position: absolute;
+	bottom:35px;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+}
+.line{
+	
+	height: 2px;
+	
+	border:1px solid black;
+	border-right: none;
+}
+.line.green{
+	width: 44px;
+	background: green;
+}
+.line.red{
+	width: 200px;
+	background: red;
+}
+.line.black{
+	width: 147px;
+	background: black;
+}
+
+.circle{
+	display:flex;
+	width: 6px;
+	height: 6px;
+	background: white;
+	border-radius: 50%;
+	z-index: 10;
+}
+.dot{
+	/*margin:0 auto;
+	margin-top:3px;*/
+	margin:auto;
+	width: 3px;
+	height: 3px;
+	background: black;
+	border-radius: 50%;
+}
+
+.elements{
+	position: absolute;
+	bottom:0px;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	width: 400px;
+	height: 36px;
+	background: #2D2C37;
+	opacity: 0.9;
+}
+.mute{
+	display: flex;
+	flex-flow:row nowrap;
+	align-items: flex-end;
+	/*width: 100px;
+	height: 30px;
+	background-color: .ddd;*/
+}
+.mute-level{
+	width: 3px;
+	background-color: #fff;
+	border-radius:5px;
+	border:1px solid black;
+	margin:10px 1px 5px 1px;
+}
+.mute-first{
+	height: 4px;
+	margin-left:10px;
+}
+.mute-second{
+	height: 9px;
+}
+.mute-third{
+	height: 14px;
+}
+.mute-fourth{
+	height: 19px;
+	background: black;
+}
+.mute-fifth{
+	height: 24px;
+	background: black;
+}
+.button, .left-container-button{
+	display:flex;
+	flex-flow: row nowrap;
+	align-items: center;
+}
+.control-button{
+	width: 17px;
+	height: 17px;
+	border:2px solid black;
+	border-radius: 50%;
+	background: #2D2C37;
+	margin:0 1px;
+	box-shadow: inset 0px 1px 1px #DDD5D5;
+}
+.control-button.button-play{
+	width: 24px;
+	height: 24px;
+}
+.img-play{
+	width: 15px;
+	margin:5px;
+}
+.img-right{
+	width: 10px;
+	margin-left: 5px;
+}
+.img-left{
+	width: 10px;
+	margin-left: 2px;
+}
+.img-settings{
+	width: 12px;
+	margin:3px;
+}
+.img-list{
+	width: 13px;
+	margin: 2px;
+}
+.control-button.button-list, .control-button.button-settings{
+	border-radius: 5px;
+}

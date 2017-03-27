@@ -94,7 +94,7 @@ a:link, a:visited, a:active{
 	top: 200px;
 	right: 0px;
 }
-.hiddentext:hover, .inner-first:hover .hiddentext{
+.hiddentext:hover{
 	height: 100px;
 	line-height: 20px;
 	white-space: normal;
@@ -126,7 +126,7 @@ a:link, a:visited, a:active{
 	top: 240px;
 	right: 0px;
 }
-.hiddentext-one:hover, .inner-first:hover .hiddentext{
+.hiddentext-one:hover, .inner-first:hover .hiddentext {
 	height: 50px;
 	line-height: 20px;
 	white-space: normal;
