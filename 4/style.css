@@ -12,7 +12,6 @@
 	margin-top:100px;
 	width: 400px;
 	height: 280px;
-	/*background: red;*/
 }
 .tray{
 	position: absolute;
@@ -22,9 +21,7 @@
 	align-items: center;
 }
 .line{
-	
-	height: 2px;
-	
+	height: 2px;	
 	border:1px solid black;
 	border-right: none;
 }
@@ -40,7 +37,6 @@
 	width: 147px;
 	background: black;
 }
-
 .circle{
 	display:flex;
 	width: 6px;
@@ -50,15 +46,12 @@
 	z-index: 10;
 }
 .dot{
-	/*margin:0 auto;
-	margin-top:3px;*/
 	margin:auto;
 	width: 3px;
 	height: 3px;
 	background: black;
 	border-radius: 50%;
 }
-
 .elements{
 	position: absolute;
 	bottom:0px;
@@ -74,16 +67,18 @@
 	display: flex;
 	flex-flow:row nowrap;
 	align-items: flex-end;
-	/*width: 100px;
-	height: 30px;
-	background-color: .ddd;*/
 }
 .mute-level{
 	width: 3px;
-	background-color: #fff;
+	background-color: #000;
 	border-radius:5px;
 	border:1px solid black;
 	margin:10px 1px 5px 1px;
+}
+.mute-first:hover, .mute-second:hover,
+.mute-third:hover, .mute-fourth:hover,
+.mute-fifth:hover{
+	background: #fff;
 }
 .mute-first{
 	height: 4px;
@@ -109,38 +104,34 @@
 	align-items: center;
 }
 .control-button{
-	width: 17px;
-	height: 17px;
-	border:2px solid black;
 	border-radius: 50%;
 	background: #2D2C37;
 	margin:0 1px;
-	box-shadow: inset 0px 1px 1px #DDD5D5;
 }
-.control-button.button-play{
-	width: 24px;
-	height: 24px;
+.inner-button{
+	border-radius: 50%;
+	background: #2D2C37;
+	margin:1px;
+}
+.inner-button:hover{
+	box-shadow: inset 1px 1px 2px white;
 }
 .img-play{
 	width: 15px;
-	margin:5px;
+	margin:2px 3px;
 }
-.img-right{
+.img-right, .img-left{
 	width: 10px;
-	margin-left: 5px;
-}
-.img-left{
-	width: 10px;
-	margin-left: 2px;
+	margin:0 2px;
 }
 .img-settings{
 	width: 12px;
-	margin:3px;
+	margin:0px 2px;
 }
 .img-list{
-	width: 13px;
-	margin: 2px;
+	width: 12px;
+	margin:1px 2px;
 }
-.control-button.button-list, .control-button.button-settings{
+.control-button.button-list button, .control-button.button-settings button{
 	border-radius: 5px;
 }
