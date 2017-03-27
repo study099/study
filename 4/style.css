@@ -1,0 +1,149 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+.vid{
+	display:flex;
+	flex-flow:column wrap;
+	align-items: flex-start;
+	margin:0px auto;
+	margin-top:100px;
+	width: 400px;
+	height: 280px;
+}
+.video{
+	width: 400px;
+	height: 330px;
+}
+.tray{
+	margin:240px 0px 0px -400px;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	z-index: 10;
+}
+.line{
+	height: 2px;	
+	border:1px solid black;
+	border-right: none;
+}
+.line.green{
+	width: 44px;
+	background: green;
+}
+.line.red{
+	width: 200px;
+	background: red;
+}
+.line.black{
+	width: 147px;
+	background: black;
+}
+.circle{
+	display:flex;
+	width: 6px;
+	height: 6px;
+	background: white;
+	border-radius: 50%;
+	z-index: 10;
+}
+.dot{
+	margin:auto;
+	width: 3px;
+	height: 3px;
+	background: black;
+	border-radius: 50%;
+}
+.elements{
+	bottom:0px;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	width: 400px;
+	height: 36px;
+	background: #2D2C37;
+	margin:242px 0px 0px -400px;
+	opacity: 0.9;
+}
+.mute{
+	display: flex;
+	flex-flow:row nowrap;
+	align-items: flex-end;
+}
+.mute-level{
+	width: 3px;
+	background-color: #000;
+	border-radius:5px;
+	border:1px solid black;
+	margin:10px 1px 5px 1px;
+}
+.mute-first:hover, .mute-second:hover,
+.mute-third:hover, .mute-fourth:hover,
+.mute-fifth:hover{
+	background: #fff;
+}
+.mute-first{
+	height: 4px;
+	margin-left:10px;
+}
+.mute-second{
+	height: 9px;
+}
+.mute-third{
+	height: 14px;
+}
+.mute-fourth{
+	height: 19px;
+	background: black;
+}
+.mute-fifth{
+	height: 24px;
+	background: black;
+}
+.button, .left-container-button{
+	display:flex;
+	flex-flow: row nowrap;
+	align-items: center;
+}
+.control-button{
+	border-radius: 50%;
+	background: #2D2C37;
+}
+.inner-button{
+	border-radius: 50%;
+	background: #2D2C37;
+	margin:auto;
+	margin:1px;
+}
+.inner-button:hover{
+	box-shadow: inset 1px 1px 2px white;
+}
+.inner-button img{
+	margin:1px;
+}
+.inner-button .img-play{
+	width: 15px;
+	margin-left: 3px;
+}
+.inner-button .img-right{
+	width: 10px;
+	margin:2px 1px 2px 2px;
+}
+.inner-button .img-left{
+	width: 10px;
+	margin:2px 2px 2px 2px;
+}
+.img-settings{
+	width: 12px;
+	margin:1px;
+}
+.img-list{
+	width: 12px;
+	margin:1px;
+}
+.control-button.button-list button, .control-button.button-settings button{
+	border-radius: 5px;
+}
+.control-button .inner-button{
+	display:flex;
+}
