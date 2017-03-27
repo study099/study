@@ -3,7 +3,6 @@
 	margin: 0;
 }
 .vid{
-	position: relative;
 	display:flex;
 	flex-flow:column wrap;
 	align-items: flex-start;
@@ -16,7 +15,6 @@
 	width: 400px;
 	height: 330px;
 }
-
 .tray{
 	margin:240px 0px 0px -400px;
 	display: flex;
@@ -110,32 +108,42 @@
 .control-button{
 	border-radius: 50%;
 	background: #2D2C37;
-	margin:0 1px;
 }
 .inner-button{
 	border-radius: 50%;
 	background: #2D2C37;
+	margin:auto;
 	margin:1px;
 }
 .inner-button:hover{
 	box-shadow: inset 1px 1px 2px white;
 }
-.img-play{
-	width: 15px;
-	margin:2px 1px 0 3px;
+.inner-button img{
+	margin:1px;
 }
-.img-right, .img-left{
+.inner-button .img-play{
+	width: 15px;
+	margin-left: 3px;
+}
+.inner-button .img-right{
 	width: 10px;
-	margin:0 2px;
+	margin:2px 1px 2px 2px;
+}
+.inner-button .img-left{
+	width: 10px;
+	margin:2px 2px 2px 2px;
 }
 .img-settings{
 	width: 12px;
-	margin:0px 2px;
+	margin:1px;
 }
 .img-list{
 	width: 12px;
-	margin:1px 2px;
+	margin:1px;
 }
 .control-button.button-list button, .control-button.button-settings button{
 	border-radius: 5px;
+}
+.control-button .inner-button{
+	display:flex;
 }
