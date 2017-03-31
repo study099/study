@@ -3,6 +3,16 @@
 	padding: 0;
 	font-family: 'Lucida Sans Unicode';
 }
+img:hover + .prices, .prices:hover{
+	visibility: visible;
+}
+a.cart:link{
+	text-decoration: none;
+}
+a.bottom-line.cart:hover{
+	color:red;
+	border-bottom: 1px solid #f2b0b0;
+}
 .body-wrapper{
 	display: flex;
 	width: 100%;
@@ -24,9 +34,6 @@
 	margin-top:50px;
 	width: 230px;
 	height: 250px;
-}
-img:hover + .prices, .prices:hover{
-	visibility: visible;
 }
 .prices{
 	display:flex;
@@ -85,13 +92,6 @@ img:hover + .prices, .prices:hover{
 	margin-top:-4px;
 	font-size: 12px;
 }
-a.cart:link{
-	text-decoration: none;
-}
-a.bottom-line.cart:hover{
-	color:red;
-	border-bottom: 1px solid #f2b0b0;
-}
 .bottom-line{
 	margin:auto;	
 	color:white;
@@ -112,4 +112,3 @@ a.bottom-line.cart:hover{
 	font-size:12px;
 	border:1px solid #e06b6b;
 }
-
