@@ -23,19 +23,11 @@ ul li:last-child{
 	border-radius: 0 0 5px 5px;
 }
 
-li:hover .span.home-image,
-li:hover .span.gallery-image,
-li:hover .span.photos-image,
-li:hover .span.photostream-image,
-li:hover .span.icloud-image{
+li:hover .span.hidden{
 	visibility: hidden;
 }
 
-li:hover .span.home-image-hover,
-li:hover .span.gallery-image-hover,
-li:hover .span.photos-image-hover,
-li:hover .span.photostream-image-hover,
-li:hover .span.icloud-image-hover{
+li:hover .span.visible{
 	visibility: visible;
 }
 div.span.circle:hover{
