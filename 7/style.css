@@ -33,6 +33,19 @@ li:hover .span.visible{
 div.span.circle:hover{
 	background: linear-gradient(to top, #ef4f4f, #f29495);
 }
+#content, #hide{
+	display:none;
+}
+#show:target #content{
+	display: flex;
+	flex-flow: column;
+}
+#show:target #open{
+	display:none;
+}
+#show:target #hide{
+	display:block;
+}
 .wrapper{
 	display:flex;
 	width: 400px;
@@ -61,6 +74,7 @@ div.span.circle:hover{
 .span{
 	margin:auto;
 }
+
 /*home-block*/
 .block.home-block{
 	background: linear-gradient(to top, #40424b, #4c4e58);
