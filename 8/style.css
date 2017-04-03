@@ -1,0 +1,127 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Arial;
+	font-size:14px;
+	color: #7f8c8d;
+}
+a{
+	text-decoration: none;
+}
+ul{
+	margin:auto;
+	margin-top:56px;
+	list-style: none;
+	border:2px solid #d8d8d8;
+}
+ul li{
+	display:flex;
+	flex-flow:column wrap;
+	justify-content: space-around;
+	align-items: center;
+	width: 146px;
+	height: 35px;
+	border:1px solid #d8d8d8;
+	background: white;
+	border-bottom: none;
+	border-left:none;
+	border-right: none;
+}
+ul li:first-child{
+	border-top:none;
+}
+li:hover{
+	background: #fafafa;
+}
+li:hover .img{
+	visibility: hidden;
+}
+li:hover .img-hover{
+	visibility: visible;
+}
+.img{
+	visibility: visible;
+}
+.img-hover{
+	visibility: hidden;
+}
+.wrap{
+	display:flex;
+	background: #eceff1;
+	margin:0 auto;
+	margin-top:70px;
+	width: 400px;
+	height: 300px;
+}
+.reference{
+	padding-top: 3px;
+}
+.reference.inscription{
+	padding-top: 0;
+}
+/*prifile*/
+.img-profil{
+	margin-left: -15px;
+}
+.img-profil-hover{
+	margin-left: -114px;
+}
+.profil{
+	margin-left: -143px;
+}
+/*messages*/
+.img-messages{
+	margin-left: -16px;
+}
+.img-messages-hover{
+	margin-left: -114px;
+}
+.messages{
+	margin-left: -110px;
+}
+/*contacts*/
+.img-contacts{
+	margin-left: -16px;
+}
+.img-contacts-hover{
+	margin-left: -114px;
+}
+.contacts{
+	margin-left: -121px;
+}
+/*portfolio*/
+.img-portfolio{
+	margin-left: -16px;
+}
+.img-portfolio-hover{
+	margin-left: -114px;
+}
+.portfolio{
+	margin-top: 3px;
+	margin-left: -124px;
+}
+/*csslive*/
+.img-csslive{
+	margin-left: -16px;
+}
+.img-csslive-hover{
+	margin-left: -114px;
+}
+.csslive{
+	margin-top: 3px;
+	margin-left: -120px;
+}
+@media all and (max-width: 700px){
+	ul li{
+		width: 36px;
+	}
+	.reference.inscription{
+		display: none;
+	}
+	.img{
+		margin-left: 4px;
+	}
+	.img-hover{
+		margin-left: -31px;
+	}
+}
