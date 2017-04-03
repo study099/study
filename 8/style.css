@@ -33,13 +33,13 @@ ul li:first-child{
 li:hover{
 	background: #fafafa;
 }
-li:hover .img{
+li:hover .img-visibility{
 	visibility: hidden;
 }
 li:hover .img-hover{
 	visibility: visible;
 }
-.img{
+.img-visibility{
 	visibility: visible;
 }
 .img-hover{
@@ -118,7 +118,7 @@ li:hover .img-hover{
 	.reference.inscription{
 		display: none;
 	}
-	.img{
+	.img-visibility{
 		margin-left: 5px;
 	}
 	.img-hover{
