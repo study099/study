@@ -1,16 +1,16 @@
-*{
+* {
 	margin: 0;
 	padding: 0;
 	font-family: Arial;
 }
-.wrap{
+.wrap {
 	display:flex;
 	width: 600px;
 	height: 450px;
 	background: url(img/background.png);
 	margin:0 auto;
 }
-.container{
+.container {
 	margin-top: 128px;
 	margin-left: 41px;
 	box-shadow: 3px 3px 2px #ededed,
@@ -18,7 +18,7 @@
 	width: 516px;
 	height: 196px;
 }
-.block-top{
+.block-top {
 	display:flex;
 	flex-flow:row wrap;
 	justify-content: space-between;
@@ -28,11 +28,11 @@
 	box-shadow:0px 2px 2px #e6e6e6;
 	background: #fafafa;	
 }
-.block-top-left{
+.block-top-left {
 	display:flex;
 	padding-left: 15px;
 }
-.userphoto{
+.userphoto {
 	display:flex;
 	width: 40px;
 	height: 40px;
@@ -41,31 +41,31 @@
 	margin-right: 9px;
 	margin-left: 1px;
 }
-.userphoto-img{
+.userphoto-img {
 	margin:auto;
 }
-.paragraphs-block-top{
+.paragraphs-block-top {
 	margin-top: 2px;
 	margin-left: 8px;
 }
-.cssliveru{
+.cssliveru {
 	font-size: 16px;
 	color: #262626;
 	font-weight: bold;
 }
-.html-and-css{
+.html-and-css {
 	font-size: 14px;
 	text-transform: uppercase;
 	color:#7b7b7b;
 	font-style: italic;
 	margin-top: 3px;
 }
-.buttons-block{
+.buttons-block {
 	display:flex;
 	flex:row wrap;
 	padding-right: 17px;
 }
-.buttons-block .email-block{
+.buttons-block .email-block {
 	display: flex;
 	flex:row wrap;
 	align-items: center;
@@ -75,29 +75,27 @@
 	border:1px solid #cbc9c9;
 	margin-right: 13px;
 }
-.email{
+.email {
 	margin: auto;
 }
-.email.visible{
+.email.visible {
 	visibility: visible;
 	margin-left: 10px;
 	margin-top: 9px;
 }
-.email.hidden{
+.email.hidden {
 	visibility: hidden;
 	margin-left: -28px;
 	margin-top: 9px;
 }
-.email.hidden:hover{
+.email.hidden:hover,
+.email.visible:hover + .email.hidden {
 	visibility: visible;
 }
-.email.visible:hover{
+.email.visible:hover {
 	visibility: hidden;
 }
-.email.visible:hover + .email.hidden{
-	visibility: visible;
-}
-.button{
+.button {
 	border:none;
 	background: linear-gradient(to top, #4f7c95, #6A9EBA);
 	box-shadow: inset 0px 2px 20px #628ca2;
@@ -107,22 +105,23 @@
 	border:1px solid #355e77;
 	height: 32px;
 	padding: 8px;
+	cursor:pointer;
 }
-.button:hover{
+.button:hover {
 	background: linear-gradient(to bottom, #4f7c95, #6A9EBA);
 }
-.button:active{
+.button:active {
 	box-shadow: inset 1px 1px 1px #4f7c95,
 				inset -1px -1px 1px #4f7c95;
 }
-.button-plus{
+.button-plus {
 	width: 31px;
 	border-right: none;
 }
-.button-follow{
+.button-follow {
 	width: 67px;
 }
-.block-bottom{
+.block-bottom {
 	display:flex;
 	flex-flow:row wrap;
 	justify-content: flex-start;
@@ -132,58 +131,56 @@
 	margin-top: 1px;
 	background: #ffffff;
 }
-.bottom-left-photo{
+.bottom-left-photo {
 	margin-top: 2px;
 	margin-left: 10px;
 }
-.block-bottom-right{
+.block-bottom-right {
 	display:flex;
 	flex-flow:column wrap;
 	align-items: flex-start;
 	margin-left: 18px;
 	height: 110px;
 }
-.paragraphs-block-bottom-top{
+.paragraphs-block-bottom-top {
 	font-size: 10px;
 	text-transform: uppercase;
 	font-weight: bold;
 	color:#ababab;
 	margin:20px 0 10px 0;
 }
-.paragraphs-block-bottom-bottom{
+.paragraphs-block-bottom-bottom {
 	font-size: 14px;
 	color: #6e6e6e;
 	margin-left: -1px;
 	margin-bottom: 3px;
 }
-.separator-line{
+.separator-line {
 	width: 360px;
 	background: #e6e6e6;
 	height: 1px;
 	margin-top: 20px;
 }
-.share-block{
+.share-block {
+	display:flex;
+	flex-flow:row wrap;
+	justify-content: center;
 	margin-top: -37px;
-	margin-left: 320px;
-	cursor:pointer;
+	margin-left: 319px;
 }
-.share-visible{
+.share-visible,
+.share-visible:hover + .share-hidden,
+.share-hidden:hover {
 	visibility: visible;
 }
-.share-hidden{
-	margin-left: -36px;
+.share-hidden {
+	margin-left: -32px;
 	visibility:hidden;
 }
-.share-visible:hover{
+.share-visible:hover {
 	visibility: hidden;
 }
-.share-visible:hover + .share-hidden{
-	visibility: visible;
-}
-.share-hidden:hover{
-	visibility: visible;
-}
-.bottom-line{
+.bottom-line {
 	display:flex;
 	flex-flow:row wrap;
 	justify-content: space-around;
@@ -191,31 +188,31 @@
 	margin-top: 7px;
 	height: 20px;
 }
-.paragraph{
+.paragraph {
 	font-weight: bold;
 	font-size: 11px;
 	font-style: italic;
 	color: #b5b5b5;
 }
-.comments-paragraph{
+.comments-paragraph {
 	color: #797979;
 	text-transform: uppercase;
 	font-style: normal;
 	font-weight: normal;
 }
-.pointer-paragraph{
+.pointer-paragraph {
 	margin-left: 4px;
 }
-.clock-img{
+.clock-img {
 	margin-left: 8px;
 }
-.clock-paragraph{
+.clock-paragraph {
 	margin-left: 4px;
 }
-.comments-img{
+.comments-img {
 	margin-bottom: -5px;
 	margin-left: 19px;
 }
-.comments-paragraph{
+.comments-paragraph {
 	margin-left: 6px;
 }
