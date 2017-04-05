@@ -1,10 +1,7 @@
 
-function sequence(start, step){
+function sequence(start = 0, step = 1){
 	var flag = true;
-	if(start === undefined)
-		start = 0;
-	if(step === undefined)
-		step = 1;
+	
 	return function (){
 		if(flag){
 			flag = false;
