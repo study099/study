@@ -65,12 +65,9 @@
 	flex:row wrap;
 	padding-right: 17px;
 }
-.buttons-block .email-block {
+.email-block {
 	display: flex;
-	flex:row wrap;
-	align-items: center;
 	width: 38px;
-	height: 32px;
 	background: #ffffff;
 	border:1px solid #cbc9c9;
 	margin-right: 13px;
@@ -78,22 +75,13 @@
 .email {
 	margin: auto;
 }
-.email.visible {
-	visibility: visible;
-	margin-left: 10px;
-	margin-top: 9px;
+.email-reference {
+	background: transparent url(img/email.png);
+	width: 20px;
+	height: 14px;
 }
-.email.hidden {
-	visibility: hidden;
-	margin-left: -28px;
-	margin-top: 9px;
-}
-.email.hidden:hover,
-.email.visible:hover + .email.hidden {
-	visibility: visible;
-}
-.email.visible:hover {
-	visibility: hidden;
+.email-reference:hover {
+	background: url(img/email1.png);
 }
 .button {
 	border:none;
@@ -163,22 +151,16 @@
 }
 .share-block {
 	display:flex;
-	flex-flow:row wrap;
-	justify-content: center;
 	margin-top: -37px;
 	margin-left: 319px;
 }
-.share-visible,
-.share-visible:hover + .share-hidden,
-.share-hidden:hover {
-	visibility: visible;
+.share-reference {
+	background: transparent url(img/share.png);
+	width: 32px;
+	height: 26px;
 }
-.share-hidden {
-	margin-left: -32px;
-	visibility:hidden;
-}
-.share-visible:hover {
-	visibility: hidden;
+.share-reference:hover {
+	background: url(img/share2.png);
 }
 .bottom-line {
 	display:flex;
