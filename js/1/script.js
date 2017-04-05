@@ -2,7 +2,7 @@
 function sequence(start = 0, step = 1){
 	var flag = true;
 	
-	return function (){
+	return  () => {
 		if(flag){
 			flag = false;
 			return start;
