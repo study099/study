@@ -10,9 +10,10 @@ function sequence(start = 0, step = 1){
 	return  () => {
 		if(flag){
 			flag = false;
-			
+
 			return start;
 		}
+		
 		return start += step;
 	}
 }

@@ -5,13 +5,12 @@
 Начальное значение по умолчанию равно 0. Генераторов можно создать сколько угодно.*/
 
 function sequence(start, step){
-	if(start === undefined){
-		start = 0;
-	}
-	if(step === undefined){
-		step = 1;
-	}
+	start = start || 0;
+	
+	step = step || 1;
+
 	start -= step;
+	
 	return function (){
 		return start += step;
 	}
