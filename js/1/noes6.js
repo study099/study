@@ -4,15 +4,15 @@
 при создании генератора. Шаг можно не указывать, тогда он будет равен одному. 
 Начальное значение по умолчанию равно 0. Генераторов можно создать сколько угодно.*/
 
-function sequence(start = 0, step = 1){
-	var flag = true;
-	
-	return  () => {
-		if(flag){
-			flag = false;
-			
-			return start;
-		}
+function sequence(start, step){
+	if(start === undefined){
+		start = 0;
+	}
+	if(step === undefined){
+		step = 1;
+	}
+	start -= step;
+	return function (){
 		return start += step;
 	}
 }
