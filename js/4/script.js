@@ -43,8 +43,9 @@ function fmap(sqr, gen){
 	return function(){
   		var arr = [];
 
-		for(var i = 0; i < arguments.length; i++)
+		for(var i = 0; i < arguments.length; i++){
 		   arr[i] = arguments[i];
+		}
 		  
 		var context = gen.apply(null, arr);
 
