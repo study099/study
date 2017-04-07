@@ -18,7 +18,7 @@ function square(x){
 var map = function (sqr, mas){
 	var arr = [];
 
-	for(let i = 0; i < mas.length; ++i){
+	for(var i = 0; i < mas.length; ++i){
 		arr[i] = sqr(mas[i]);
 	}
 	
