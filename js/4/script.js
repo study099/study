@@ -38,8 +38,7 @@ function add(a, b){
 
 function square(x) { return x * x; }
 
-function fmap(a, gen){
- 	var ctx = 0, ref = 0;
+function fmap(sqr, gen){
  
 	return function(){
   		var arr = [];
@@ -47,10 +46,9 @@ function fmap(a, gen){
 		for(var i = 0; i < arguments.length; i++)
 		   arr[i] = arguments[i];
 		  
-		ctx = gen.apply(null, arr);
-		ref = a(ctx);
+		var context = gen.apply(null, arr);
 
-		return ref;
+		return sqr(context);
 	}
 }
 
