@@ -18,10 +18,8 @@ function citiesList(arr, number) {
     }
 
     arr = _.orderBy(arr, 'population', 'desc');
-
-    for (var i = 0; i < number; ++i) {
-        console.log("Город: " + arr[i].city + " Население: " + arr[i].population);
-    }
+    
+    console.log(_.take(arr, number));
 }
 
 citiesList(cities, 5);
