@@ -19,7 +19,7 @@ function partialAny(func) {
                 resultArr.push(innerParams[j]);
             }
             else{
-                resultArr.push(outerParams[i]);
+                resultArr.push(outer);
             }
 		}
 
