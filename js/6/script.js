@@ -10,26 +10,21 @@ function partialAny(func) {
 	return function () {
 		var innerParams = arguments;
 		var resultArr = [];
-		var i = 0;
 		var j = 0;
-		var inner;
-		var outer;
 
-		for (i; i < outerParams.length; i++){
-		    outer = outerParams[i];
+		for (var i = 0; i < outerParams.length; i++){
+		    var outer = outerParams[i];
 
 		    if (outer === undefined){
-                inner = innerParams[j];
-                resultArr.push(inner);
+                resultArr.push(innerParams[j]);
             }
             else{
-                resultArr.push(outer);
+                resultArr.push(outerParams[i]);
             }
 		}
 
 		for (j; j < innerParams.length; j++){
-            inner = innerParams[j];
-			resultArr.push(inner);
+			resultArr.push(innerParams[j]);
 		}
 
 		return func.apply(this, resultArr);
