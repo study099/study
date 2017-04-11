@@ -5,27 +5,27 @@
 // Города в списке могут идти в произвольном порядке. Напиши программу, которая отберет и 
 // выведет N самых населенных городов по убыванию числа жителей.
 var cities = [
-    {country:"Япония", city:"Токио", population:37750},
-    {country:"Индонезия", city:"Джакарта", population:31320},
-    {country:"Индия", city:"Дели", population:25735},
-    {country:"Южная Корея", city:"Сеул", population:23575},
-    {country:"Филиппины", city:"Манила", population:22930},
-    {country:"Индия", city:"Мумбаи", population:22885},
-    {country:"Пакистан", city:"Карачи", population:22825},
-    {country:"КНР", city:"Шанхай", population:22685},
-    {country:"США", city:"Нью-Йорк", population:20685},
-    {country:"Бразилия", city:"Сан-Паулу", population:20605},
-    {country:"КНР", city:"Пекин", population:20390}
+    {country: "Япония", city: "Токио", population: 37750},
+    {country: "Индонезия", city: "Джакарта", population: 31320},
+    {country: "Индия", city: "Дели", population: 25735},
+    {country: "Южная Корея", city: "Сеул", population: 23575},
+    {country: "Филиппины", city: "Манила", population: 22930},
+    {country: "Индия", city: "Мумбаи", population: 22885},
+    {country: "Пакистан", city: "Карачи", population: 22825},
+    {country: "КНР", city: "Шанхай", population: 22685},
+    {country: "США", city: "Нью-Йорк", population: 20685},
+    {country: "Бразилия", city: "Сан-Паулу", population: 20605},
+    {country: "КНР", city: "Пекин", population: 20390}
 ];
 
 function citiesList(arr, number) {
-    if(number > arr.length) {
+    if (number > arr.length) {
         this.number = arr.length;
     }
 
-    for(var i = 0; i < arr.length; ++i){
-        for(var j = arr.length - 1; j > i; --j){
-            if(arr[i].population < arr[j].population){
+    for (var i = 0; i < arr.length; ++i) {
+        for (var j = arr.length - 1; j > i; --j) {
+            if (arr[i].population < arr[j].population) {
                 var tmp = arr[i].population;
                 arr[i].population = arr[j].population;
                 arr[j].population = tmp;
@@ -37,7 +37,7 @@ function citiesList(arr, number) {
         }
     }
 
-    for(var k = 0; k < number; ++k){
+    for (var k = 0; k < number; ++k) {
         console.log("Город: " + arr[k].city + " Население: " + arr[k].population);
     }
 }
