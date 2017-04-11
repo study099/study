@@ -13,7 +13,7 @@ function partialAny(func) {
 
 		for (var i = 0; i < outerParams.length; i++){
 		    var outer = outerParams[i];
-            var argument = outerParams[i] === undefined ? innerParams[0] : outerParams[i];
+            var argument = outerParams[i] === undefined ? innerParams[0] : outer;
 
             resultArr.push(argument);
 		}
