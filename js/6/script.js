@@ -10,20 +10,15 @@ function partialAny(func) {
 	return function () {
 		var innerParams = arguments;
 		var resultArr = [];
-		var j = 0;
 
 		for (var i = 0; i < outerParams.length; i++){
 		    var outer = outerParams[i];
+            var argument = outerParams[i] === undefined ? innerParams[0] : outerParams[i];
 
-		    if (outer === undefined){
-                resultArr.push(innerParams[j]);
-            }
-            else{
-                resultArr.push(outer);
-            }
+            resultArr.push(argument);
 		}
 
-		for (j; j < innerParams.length; j++){
+		for (var j = 0 ; j < innerParams.length; j++){
 			resultArr.push(innerParams[j]);
 		}
 
