@@ -8,7 +8,12 @@ function pluck(arr, prop) {
     var result = [];
 
     for (var i = 0; i < arr.length; ++i){
-    	result.push(arr[i][prop]);
+    	if(arr[i][prop] !== undefined){
+    		result.push(arr[i][prop]);
+    	}
+    	else{
+    		console.log("Property doesn't exist!");
+    	}
 	}
 
 	return result;
