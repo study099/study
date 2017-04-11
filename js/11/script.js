@@ -35,7 +35,6 @@ function citiesList(arr, number) {
                 arr[j].city = tmp;
             }
         }
-
     }
 
     for(var k = 0; k < number; ++k){
