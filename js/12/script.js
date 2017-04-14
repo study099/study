@@ -7,13 +7,13 @@
 // сыром (+ 10 тугриков, + 20 калорий)
 // салатом (+ 20 тугриков, + 5 калорий)
 // картофелем (+ 15 тугриков, + 10 калорий)
-// Дополнительно, гамбургер можно посыпать приправой (+ 15 тугриков, 0 калорий) и 
-// полить майонезом (+ 20 тугриков, + 5 калорий). Напиши программу, расчиытвающую 
-// стоимость и калорийность гамбургера. Используй ООП подход (подсказка: нужен класс Гамбургер, константы, 
+// Дополнительно, гамбургер можно посыпать приправой (+ 15 тугриков, 0 калорий) и
+// полить майонезом (+ 20 тугриков, + 5 калорий). Напиши программу, расчиытвающую
+// стоимость и калорийность гамбургера. Используй ООП подход (подсказка: нужен класс Гамбургер, константы,
 // 	методы для выбора опций и рассчета нужных величин).
 
 // Код должен быть защищен от ошибок. Представь, что твоим классом будет пользоваться другой программист.
-// Если он передает неправильный тип гамбургера, например, или неправильный вид добавки, 
+// Если он передает неправильный тип гамбургера, например, или неправильный вид добавки,
 // должно выбрасываться исключение (ошибка не должна молча игнорироваться).
 Hamburger.SIZE_SMALL = {price: 50, calories: 20};
 Hamburger.SIZE_LARGE = {price: 100, calories: 40};
@@ -24,18 +24,44 @@ Hamburger.TOPPING_MAYO = {price: 20, calories: 5};
 Hamburger.TOPPING_SPICE = {price: 15, calories: 0};
 
 function Hamburger(size, stuffing) {
-    if (size === undefined || stuffing === undefined) {
-        console.log("Wrong data");
+    try {
+        this.size = size || Hamburger.SIZE_SMALL;
+        this.stuffing = stuffing || Hamburger.STUFFING_CHEESE;
+
+        try {
+            if ((typeof size !== "object" || typeof size === undefined)) {
+                throw new HamburgerException("Invalid parameters. Must be known constant. Default value for size - small");
+            }
+        }
+        catch (e) {
+            console.log(e.name + " " + e.message);
+        }
+
+        try {
+            if (typeof stuffing !== "object" || typeof stuffing === undefined) {
+                throw new HamburgerException("Invalid parameters. Must be known constant. Default value for stuffing - cheese");
+            }
+        }
+        catch (e) {
+            console.log(e.name + " " + e.message);
+        }
     }
-    else {
-        this.size = size;
-        this.stuffing = stuffing;
+    catch (e) {
     }
 }
 
 var toppingArr = [];
 
 Hamburger.prototype.addTopping = function (topping) {
+    try {
+        if (topping === undefined || typeof topping !== "object") {
+            throw new HamburgerException("Invalid parameter. Must be known constant");
+        }
+    }
+    catch (e) {
+        console.log(e.name + " " + e.message);
+    }
+
     this.topping = topping;
     var ex = false;
 
@@ -57,10 +83,16 @@ Hamburger.prototype.addTopping = function (topping) {
 }
 
 Hamburger.prototype.removeTopping = function (topping) {
-    if (this.topping === undefined) {
-        console.log("Such a topping doesn't exist");
+    try {
+        if (topping === undefined || typeof topping !== "object") {
+            throw new HamburgerException("Invalid parameter. Must be known constant");
+        }
     }
-    else if (this.topping === toppingArr[0]) {
+    catch (e) {
+        console.log(e.name + " " + e.message);
+    }
+
+    if (this.topping === toppingArr[0]) {
         toppingArr.shift();
     }
     else {
@@ -106,8 +138,18 @@ Hamburger.prototype.calculateCalories = function () {
 
     return this.size.calories + this.stuffing.calories + sumCalories;
 }
+//Функция-класс для обработки исключительных ситуаций
+function HamburgerException(message) {
+    this.message = message || "Unknown error";
+    this.name = "Hamburger constructor error";
+    this.stack = (new Error()).stack;
+}
+
+HamburgerException.prototype = Object.create(Error.prototype);
+HamburgerException.prototype.constructor = HamburgerException;
 
 // маленький гамбургер с начинкой из сыра
+// var hamburger = new Hamburger();//для проверки исключения
 var hamburger = new Hamburger(Hamburger.SIZE_SMALL, Hamburger.STUFFING_CHEESE);
 // добавка из майонеза
 hamburger.addTopping(Hamburger.TOPPING_MAYO);
