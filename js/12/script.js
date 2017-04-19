@@ -62,12 +62,14 @@ Hamburger.prototype.addTopping = function (topping) {
         if (!toppingExistance) {
             toppings.push(topping);
         }
+
+        toppingExistance = false;
     }
     else {
         toppings.push(topping);
     }
 
-    return toppings;
+    return topping;
 }
 
 Hamburger.prototype.removeTopping = function (topping) {
@@ -75,14 +77,11 @@ Hamburger.prototype.removeTopping = function (topping) {
         return;
     }
 
-    if (topping === toppings[0]) {
-        toppings.shift();
-    }
-    else {
-        toppings.pop();
+    if (typeof toppings.indexOf(topping) === "number") {
+        toppings.splice(toppings.indexOf(topping), 1);
     }
 
-    return toppings;
+    return topping;
 }
 
 Hamburger.prototype.getToppings = function () {
@@ -97,10 +96,8 @@ Hamburger.prototype.getStuffing = function () {
     switch (this.stuffing) {
         case Hamburger.STUFFING_SALAD:
             return "Stuffing is salad";
-            break;
         case Hamburger.STUFFING_POTATO:
             return "Stuffing is potato";
-            break;
         default:
             return "Stuffing is cheese";
     }
