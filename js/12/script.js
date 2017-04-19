@@ -24,56 +24,56 @@ Hamburger.TOPPING_MAYO = {price: 20, calories: 5};
 Hamburger.TOPPING_SPICE = {price: 15, calories: 0};
 
 function Hamburger(size, stuffing) {
-    try {
-        this.size = size || Hamburger.SIZE_SMALL;
-        this.stuffing = stuffing || Hamburger.STUFFING_CHEESE;
+    dataValidation(size, "Must be known constant. Default value is small");
+    dataValidation(stuffing, "Must be known constant. Default value is cheese");
 
-        if ((typeof size !== "object" || typeof size === undefined) || (typeof stuffing !== "object" || typeof stuffing === undefined)) {
-            throw new HamburgerException("Invalid parameters. Must be known constant. Default value for size - small, for stuffing - cheese");
-        }
-    }
-    catch (e) {
-        console.log(e.name + " " + e.message);
-    }
+    this.size = size || Hamburger.SIZE_SMALL;
+    this.stuffing = stuffing || Hamburger.STUFFING_CHEESE;
 }
 
 var toppings = [];
 
-function dataValidation(param) {
+function dataValidation(param, message) {
     try {
         if (param === undefined || typeof param !== "object") {
-            throw new HamburgerException("Invalid parameter. Must be known constant");
+            throw new HamburgerException(message);
         }
+
+        return true;
     }
     catch (e) {
         console.log(e.name + " " + e.message);
+
+        return false;
     }
 }
 
 Hamburger.prototype.addTopping = function (topping) {
-    dataValidation(topping);
+    if (!dataValidation(topping, "Must be known constant.")) {
+        return;
+    }
 
     var toppingExistance = false;
 
-    if (toppings[0] === undefined) {
-        toppings.push(topping);
-    }
-    else {
-        if (toppings.indexOf(topping) === 0 || toppings.indexOf(topping) === 1) {
-            console.log("Topping exists");
-            toppingExistance = true;
-        }
+    if (toppings.indexOf(topping) !== -1) {
+        console.log("Topping exists");
+        toppingExistance = true;
 
         if (!toppingExistance) {
             toppings.push(topping);
         }
+    }
+    else {
+        toppings.push(topping);
     }
 
     return toppings;
 }
 
 Hamburger.prototype.removeTopping = function (topping) {
-    dataValidation(topping);
+    if (!dataValidation(topping, "Must be known constant.")) {
+        return;
+    }
 
     if (topping === toppings[0]) {
         toppings.shift();
@@ -96,24 +96,24 @@ Hamburger.prototype.getSize = function () {
 Hamburger.prototype.getStuffing = function () {
     switch (this.stuffing) {
         case Hamburger.STUFFING_SALAD:
-            console.log("Stuffing is salad");
+            return "Stuffing is salad";
             break;
         case Hamburger.STUFFING_POTATO:
-            console.log("Stuffing is potato");
+            return "Stuffing is potato";
             break;
         default:
-            console.log("Stuffing is cheese");
+            return "Stuffing is cheese";
     }
 }
 
 Hamburger.prototype.calculatePrice = function () {
-    var sumTopping = 0;
+    var sumPrice = 0;
 
     for (var i = 0; i < toppings.length; ++i) {
-        sumTopping += toppings[i].price;
+        sumPrice += toppings[i].price;
     }
 
-    return this.size.price + this.stuffing.price + sumTopping;
+    return this.size.price + this.stuffing.price + sumPrice;
 }
 
 Hamburger.prototype.calculateCalories = function () {
@@ -128,7 +128,7 @@ Hamburger.prototype.calculateCalories = function () {
 //Функция-класс для обработки исключительных ситуаций
 function HamburgerException(message) {
     this.message = message || "Unknown error";
-    this.name = "Hamburger constructor error";
+    this.name = "Error!";
     this.stack = (new Error()).stack;
 }
 
@@ -153,4 +153,4 @@ console.log("Is hamburger large: %s", hamburger.getSize() === Hamburger.SIZE_LAR
 // Убрать добавку
 hamburger.removeTopping(Hamburger.TOPPING_SPICE);
 console.log("Have %d toppings", hamburger.getToppings().length); // 1
-hamburger.getStuffing();
+console.log(hamburger.getStuffing());
