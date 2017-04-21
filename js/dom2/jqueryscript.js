@@ -25,25 +25,12 @@ $(document).ready(function () {
 
     $(table).on('mousedown', 'td', function () {
         if ($(this).hasClass('td-white')) {
-            $(this).removeClass('td-white');
-            $(this).addClass('td-black');
+            $(this).removeClass('td-white').addClass('td-black');
         }
         else {
-            $(this).removeClass('td-black');
-            $(this).addClass('td-white');
+            $(this).removeClass('td-black').addClass('td-white');
         }
     });
-
-    // $(table).delegate('td', 'mousedown', function () {
-    //     if ($(this).hasClass('td-white')) {
-    //         $(this).removeClass('td-white');
-    //         $(this).addClass('td-black');
-    //     }
-    //     else {
-    //         $(this).removeClass('td-black');
-    //         $(this).addClass('td-white');
-    //     }
-    // });
 
     function invertColors() {
         var tdBlack = $('td.td-black');
