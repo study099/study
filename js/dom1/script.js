@@ -17,19 +17,13 @@ function printToConsole(param) {
 }
 
 function hasClass(node, klass) {
-    var pattern = /\s/;
-
-    if (pattern.test(klass)) {
-        return false;
-    }
-
-    return (' ' + node.className + ' ').indexOf(' ' + klass + ' ') !== -1;
+    return (' ' + node.className + ' ').replace(/\s/, ' ').indexOf(' ' + klass + ' ') !== -1;
 }
 
 function addClass(node, klass) {
     var previousClass = node.getAttribute('class');
 
-    return node.className = previousClass === undefined || previousClass === '' ? klass : previousClass + ' ' + klass;
+    return node.className = !previousClass ? klass : previousClass + ' ' + klass;
 }
 
 function removeClass(node, klass) {
@@ -39,8 +33,10 @@ function removeClass(node, klass) {
         return 'Class doesn\'t exists';
     }
 
-    if (classes.indexOf(klass) !== -1) {
-        classes.splice(classes.indexOf(klass), 1);
+    var indexOfClass = classes.indexOf(klass);
+
+    if (indexOfClass !== -1) {
+        classes.splice(indexOfClass, 1);
     }
 
     node.className = classes.join(' ');
@@ -51,7 +47,7 @@ function removeClass(node, klass) {
 printToConsole(hasClass(createNode('div', 'test'), 'test')); // true
 printToConsole(hasClass(createNode('div', 'test'), 'tes')); // false
 printToConsole(hasClass(createNode('div', 'test1 test2'), 'tes')); // false
-printToConsole(hasClass(createNode('div', 'test1 test2  test'), 'test')); // true
+printToConsole(hasClass(createNode('div', 'test1 test2  test'), 'test2')); // true
 printToConsole(addClass(createNode('div', ''), 'mmm'));
 printToConsole(addClass(createNode('div', 'eee'), 'mmm'));
 printToConsole(addClass(createNode('div', 'eee l-l-l lll lll'), 'mmm'));
