@@ -50,6 +50,7 @@ table.onmousedown = function (event) {
 }
 
 function changeColor(node) {
+
     node.classList.remove('td-white');
     node.classList.add('td-black');
 }
