@@ -23,12 +23,12 @@ $(document).ready(function () {
 
     Table.initTable();
 
-    $(table).on('mousedown','td', function () {
+    $(table).on('mousedown', 'td', function () {
         if ($(this).hasClass('td-white')) {
             $(this).removeClass('td-white');
             $(this).addClass('td-black');
         }
-        else{
+        else {
             $(this).removeClass('td-black');
             $(this).addClass('td-white');
         }
@@ -46,16 +46,11 @@ $(document).ready(function () {
     // });
 
     function invertColors() {
-        var td = $('td');
+        var tdBlack = $('td.td-black');
+        var tdWhite = $('td.td-white');
 
-        if (td.hasClass('td-black')) {
-            td.removeClass('td-black');
-            td.addClass('td-white');
-        }
-        else {
-            td.removeClass('td-white');
-            td.addClass('td-black');
-        }
+        tdBlack.removeClass('td-black').addClass('td-white');
+        tdWhite.removeClass('td-white').addClass('td-black');
     }
 
     $('#change-colors').on('mousedown', invertColors);
